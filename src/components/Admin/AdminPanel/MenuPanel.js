@@ -19,7 +19,7 @@ class MenuPanel extends Component{
       <div style={{ width: 200, height:'100vh', textAlign: 'left', maxWidth: 200, minWidth: 200}}>
         <Menu mode="inline" theme="light" defaultSelectedKeys={[this.props.location.pathname]} defaultOpenKeys={[path]} style={{ height: '100vh' }}  >
 
-          <Menu.Item style={{height: 'auto', textAlign: "center", marginTop: '30px', marginBottom: '30px'}} disabled={true}>
+          <Menu.Item style={{height: 'auto', textAlign: "center", marginTop: '50px', marginBottom: '50px'}} disabled={true}>
             <img src={logo} alt="logoironhack" width="80%" />
           </Menu.Item>
 
@@ -35,14 +35,14 @@ class MenuPanel extends Component{
                 <Icon type="user-add" /><span>New Student</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="/students/all">
-              <Link to="/students/all" >
+            <Menu.Item key="/admin/students/all">
+              <Link to="/admin/students/all" >
                 <Icon type="user" /><span>All Students</span>
               </Link>
             </Menu.Item>
           </SubMenu>
 
-          <SubMenu key="/cohorts" title={<span><Icon type="team" /><span>Cohorts</span></span>}>
+          <SubMenu key="/admin/cohorts" title={<span><Icon type="team" /><span>Cohorts</span></span>}>
             <Menu.Item key="/cohorts/new">
               <Link to="/cohorts/new">
                 <Icon type="usergroup-add" /><span>New Cohort</span>
@@ -55,7 +55,7 @@ class MenuPanel extends Component{
             </Menu.Item>
           </SubMenu>
 
-          <Menu.Item key="/projects">
+          <Menu.Item key="/admin/projects">
             <Link to="/projects" >
               <Icon type="code" /><span>Projects</span>
             </Link>
@@ -67,7 +67,7 @@ class MenuPanel extends Component{
             </Link>
           </Menu.Item>
 
-          <Menu.Item onClick={this.logOut} key="/logout">
+          <Menu.Item onClick={this.logOut} key="/admin/logout">
             <Link to="/">
               <Icon type="poweroff" /> <span>Logout</span>
             </Link>

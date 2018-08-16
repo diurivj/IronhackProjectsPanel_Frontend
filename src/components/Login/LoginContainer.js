@@ -12,7 +12,7 @@ class LoginContainer extends Component{
 
   componentWillMount() {
     let user = JSON.parse(localStorage.getItem('user'));
-    if(user){
+    if (user) {
       this.setState({isLogged:true});
       if (user.role === 'admin') {
         this.props.history.push('/admin')
@@ -31,28 +31,27 @@ class LoginContainer extends Component{
       password: e.target.password.value
     };
     logIn(auth)
-      .then(r => {
-        let user = r.user;
-        let token = r.access_token;
-        toastr.success(`Bienvenido ${user.role}`);
-        localStorage.setItem('user', JSON.stringify(user));
-        localStorage.setItem('access_token', JSON.stringify(token));
-        if(user.role === 'admin') {
-          this.props.history.push('/admin');
-        } else {
-          this.props.history.push('/user');
-        }
-      })
-      .catch(error => {
-        console.log(error);
-        toastr.error('Revisa tu correo y/o contraseña');
-      })
-
+    .then(r => {
+      let user = r.user;
+      let token = r.access_token;
+      toastr.success(`Bienvenido ${user.username}`);
+      localStorage.setItem('user', JSON.stringify(user));
+      localStorage.setItem('access_token', JSON.stringify(token));
+      if (user.role === 'admin') {
+        this.props.history.push('/admin');
+      } else {
+        this.props.history.push('/user');
+      }
+    })
+    .catch(error => {
+      console.log(error);
+      toastr.error('Revisa tu correo y/o contraseña');
+    })
   };
 
   render(){
     const {isLogged} = this.state;
-    if(isLogged) toastr.success('Bienvenido de vuelta');
+    if (isLogged) toastr.success('Bienvenido de vuelta');
     return (
       <div className="container">
         <LoginForm onSubmit={this.login} />

@@ -1,5 +1,5 @@
-//const localAPI = "http://localhost:3000";
-const herokuAPI = "https://ironhack-projects.herokuapp.com/";
+// const localAPI = "http://localhost:3000";
+const herokuAPI = "https://ironhack-projects.herokuapp.com";
 
 export function logIn(user){
   return fetch(herokuAPI + '/auth/login', {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { List, Avatar, Button, Spin } from 'antd';
+import { List, Avatar } from 'antd';
 
 class AllStudentsList extends Component{
 

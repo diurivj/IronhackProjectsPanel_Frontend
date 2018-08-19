@@ -13,7 +13,6 @@ class MenuPanel extends Component{
   };
 
   render(){
-    console.log(this.props);
     let path = this.props.location.pathname.split('/').slice(0,-1).join('/');
     return(
       <div style={{ width: 200, height:'100vh', textAlign: 'left', maxWidth: 200, minWidth: 200}}>
@@ -23,9 +22,15 @@ class MenuPanel extends Component{
             <img src={logo} alt="logoironhack" width="80%" />
           </Menu.Item>
 
-          <Menu.Item key='/admin'>
-            <Link to="/admin">
-              <Icon type="global" /><span>Public Projects</span>
+          {/*<Menu.Item key='/admin'>*/}
+            {/*<Link to="/admin">*/}
+              {/*<Icon type="global" /><span>Public Projects</span>*/}
+            {/*</Link>*/}
+          {/*</Menu.Item>*/}
+
+          <Menu.Item key="/admin/profile">
+            <Link to="/admin/profile">
+              <Icon type="profile" /><span>Profile</span>
             </Link>
           </Menu.Item>
 
@@ -58,12 +63,6 @@ class MenuPanel extends Component{
           <Menu.Item key="/admin/projects">
             <Link to="/projects" >
               <Icon type="code" /><span>Projects</span>
-            </Link>
-          </Menu.Item>
-
-          <Menu.Item key="/admin/profile">
-            <Link to="/admin/profile">
-              <Icon type="idcard" /><span>Profile</span>
             </Link>
           </Menu.Item>
 

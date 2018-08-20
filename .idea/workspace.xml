@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="404902e1-a347-4cdb-a0a4-59d5be7b833c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminPanel/MenuPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminPanel/MenuPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminPublish/PublishContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminPublish/PublishContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminStudents/NewStudents/NewStudentsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminStudents/NewStudents/NewStudentsContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminStudents/NewStudents/NewStudentsForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminStudents/NewStudents/NewStudentsForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PublicViews/Project3/ListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PublicViews/Project3/ListPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/AdminActions/AdminCohortActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/AdminActions/AdminCohortActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/AdminActions/AdminStudentActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/AdminActions/AdminStudentActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/getUserAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/getUserAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/AdminReducers/AdminCohortsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/AdminReducers/AdminCohortsReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/AdminReducers/AdminStudentsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/AdminReducers/AdminStudentsReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/initialState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/initialState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/authServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/authServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/cohortServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/cohortServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/studentServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/studentServices.js" afterDir="false" />
-    </list>
+    <list default="true" id="404902e1-a347-4cdb-a0a4-59d5be7b833c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -37,7 +15,7 @@
     <session id="800084748">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="3" />
@@ -84,7 +62,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminPanel/MenuPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="651">
               <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -297,12 +275,12 @@
       <workItem from="1534435455888" duration="16379000" />
       <workItem from="1534527953398" duration="1670000" />
       <workItem from="1534658259535" duration="12805000" />
-      <workItem from="1534695190137" duration="9917000" />
+      <workItem from="1534695190137" duration="9953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58348000" />
+    <option name="totallyTimeSpent" value="58384000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -643,7 +621,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminPanel/MenuPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
+        <state relative-caret-position="651">
           <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />

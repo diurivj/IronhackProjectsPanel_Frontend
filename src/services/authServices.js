@@ -9,6 +9,10 @@ export function logIn(user){
     },
     body: JSON.stringify(user)
   })
-  .then(r => r.json())
-  .then(user => user);
+  .then(r => {
+    return r.json();
+  })
+  .then(user => {
+    return user;
+  });
 }

@@ -1,50 +1,25 @@
-import React, {Component} from 'react';
-import { List, Avatar } from 'antd';
+import React from 'react';
+import { List, Avatar, Icon } from 'antd';
 
-class AllStudentsList extends Component{
+const AllStudentsList = ({students}) => {
 
-  state = {
-    loading: false,
-    loadingMore: false,
-    showLoadingMore: true,
-    data: [
-      {
-        gender: "female",
-        name: {
-          title: "mrs",
-          first: "kitty",
-          last: "robinson"
-        },
-        email: "kitty.robinson@example.com",
-        nat: "US"
-      },
-      {
-        gender: "female",
-        name: {
-          title: "mademoiselle",
-          first: "regina",
-          last: "bertrand"
-        },
-        email: "regina.bertrand@example.com",
-        nat: "CH"
-      }
-    ]
-  };
+  let loading = false;
+  //let loadingMore = false;
+  //let showLoadingMore = true;
+  console.log(students);
 
- render(){
-   const {loading, data} = this.state;
-   return(
-     <List style={{textAlign: 'left'}} className="demo-loadmore-list" loading={loading} itemLayout="horizontal" dataSource={data} renderItem={item => (
-       <List.Item actions={[<a>edit</a>, <a>more</a>]}>
+  return(
+     <List style={{textAlign: 'left', width: '100%', height: '50vh', overflow: 'scroll', marginTop: '50px'}} className="demo-loadmore-list" loading={loading} itemLayout="horizontal" dataSource={students} renderItem={item => (
+       <List.Item actions={[<Icon type="edit" style={{margin: '10px'}}/>, <Icon type="delete" style={{margin: '10px', color: 'red'}}/>]}>
          <List.Item.Meta
            avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-           title={<a href="https://ant.design">{item.name.last}</a>}
-           description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+           title={<a href="https://ant.design">{item.name} {item.lastname}</a>}
+           description={item.cohort.name}
          />
+         <p>Cohort {item.cohort.generation}</p>
        </List.Item>
      )}/>
    )
- }
-}
+};
 
 export default AllStudentsList;

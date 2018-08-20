@@ -1,4 +1,4 @@
 export default {
   students: [],
-  cohorts: []
+  cohorts: [],
 }

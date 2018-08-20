@@ -1,10 +1,12 @@
 import {combineReducers} from 'redux';
-import adminStudents from './AdminReducers/AdminStudentsReducer';
-import adminCohorts from './AdminReducers/AdminCohortsReducer';
+import students from './AdminReducers/AdminStudentsReducer';
+import cohorts from './AdminReducers/AdminCohortsReducer';
+
+// VERY IMPORTANT!!!! NAMING REDUCERS AS IDK //
 
 const rootReducer = combineReducers({
-  adminStudents,
-  adminCohorts
+  students,
+  cohorts
 });
 
 export default rootReducer;

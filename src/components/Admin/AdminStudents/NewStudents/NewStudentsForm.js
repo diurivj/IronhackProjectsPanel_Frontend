@@ -3,7 +3,6 @@ import {Select, Button, Form, Input, Icon} from 'antd';
 const Option = Select.Option;
 
 export const StudentForm = ({handleSubmit, handleChange, handleCohort, cohorts}) => {
-  console.log(cohorts);
   return(
       <Form onSubmit={handleSubmit} style={{width: '300px'}}>
         <Form.Item>
@@ -15,9 +14,11 @@ export const StudentForm = ({handleSubmit, handleChange, handleCohort, cohorts})
             placeholder='Select cohort'
             onChange={handleCohort}
           >
-            <Option value='1'>Cohort 1</Option>
-            <Option value='2'>Cohort 2</Option>
-            <Option value='3'>Cohort 3</Option>
+            {cohorts.map(cohort => {
+              return (
+                <Option key={cohort._id} value={cohort.generation}>{cohort.name}</Option>
+              )
+            })}
           </Select>
         </Form.Item>
         <Form.Item>

@@ -28,8 +28,8 @@ class MenuPanel extends Component{
             {/*</Link>*/}
           {/*</Menu.Item>*/}
 
-          <Menu.Item key="/admin/profile">
-            <Link to="/admin/profile">
+          <Menu.Item key="/admin">
+            <Link to="/admin">
               <Icon type="profile" /><span>Profile</span>
             </Link>
           </Menu.Item>
@@ -48,20 +48,20 @@ class MenuPanel extends Component{
           </SubMenu>
 
           <SubMenu key="/admin/cohorts" title={<span><Icon type="team" /><span>Cohorts</span></span>}>
-            <Menu.Item key="/cohorts/new">
-              <Link to="/cohorts/new">
+            <Menu.Item key="/admin/cohorts/new">
+              <Link to="/admin/cohorts/new">
                 <Icon type="usergroup-add" /><span>New Cohort</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="/cohorts/all">
-              <Link to="/cohorts/all" >
+            <Menu.Item key="/admin/cohorts/all">
+              <Link to="/admin/cohorts/all" >
                 <Icon type="team" /><span>All Cohorts</span>
               </Link>
             </Menu.Item>
           </SubMenu>
 
           <Menu.Item key="/admin/projects">
-            <Link to="/projects" >
+            <Link to="/admin/projects" >
               <Icon type="code" /><span>Projects</span>
             </Link>
           </Menu.Item>

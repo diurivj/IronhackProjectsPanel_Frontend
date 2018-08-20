@@ -6,12 +6,19 @@ export const getCohortsSuccess = (cohorts) => (
   { type: types.GET_COHORTS, cohorts }
 );
 
+export const updateCohortSuccess = (cohort) => (
+  { type: types.UPDATE_COHORT, cohort}
+);
+
 //thunks
 export const loadCohorts = () => (dispatch) => {
   cohortServices.getCohorts()
-    .then(cohorts => {
-      dispatch(getCohortsSuccess(cohorts));
-      console.log(cohorts);
-    })
+    .then(cohorts => dispatch(getCohortsSuccess(cohorts)))
+    .catch(error => console.log(error))
+};
+
+export const updateCohort = (changes, id) => (dispatch) => {
+  cohortServices.updateCohort(changes, id)
+    .then(cohort => dispatch(updateCohortSuccess(cohort)))
     .catch(error => console.log(error))
 };

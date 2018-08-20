@@ -2,7 +2,7 @@ import React from 'react';
 import {Select} from 'antd';
 const Option = Select.Option;
 
-export const AllStudentsSearch = () => {
+export const AllStudentsSearch = ({students}) => {
   return(
     <Select
       style={{width: '250px'}}
@@ -11,9 +11,12 @@ export const AllStudentsSearch = () => {
       optionFilterProp="children"
       placeholder='Search student'
     >
-      <Option value='1'>Bliss</Option>
-      <Option value='2'>Oswaldo</Option>
-      <Option value='3'>David</Option>
+      {students.map(student => {
+        let fullname = student.name + ' ' + student.lastname;
+        return (
+          <Option key={student._id} value={student._id}>{fullname}</Option>
+        )
+      })}
     </Select>
   )
 };

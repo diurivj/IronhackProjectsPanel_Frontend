@@ -20,11 +20,10 @@ class ListPage extends Component{
 
   handleClick=()=>{
     this.props.history.goBack()
-  }
+  };
 
   render(){
     const {students} = this.state;
-    console.log(this.props)
     return (
       <div style={{ backgroundColor: "#181B23", display: "flex", justifyContent: "center", height: "100vh", alignItems: "center", width: "100%" }}>
         <div style={{ display: "flex", justifyContent: "center", height: "90vh", alignItems: "center", width: "90%" }}  >

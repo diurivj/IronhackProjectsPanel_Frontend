@@ -1,8 +1,8 @@
 // const localAPI = "http://localhost:3000";
-const herokuAPI = "https://ironhack-projects.herokuapp.com";
+const herokuAPI = "https://ironhack-projects.herokuapp.com/auth";
 
 export function logIn(user){
-  return fetch(herokuAPI + '/auth/login', {
+  return fetch(herokuAPI + '/login', {
     method: 'POST',
     headers: {
       "Content-Type": "application/json"
@@ -16,3 +16,19 @@ export function logIn(user){
     return user;
   });
 }
+
+export function editProfile(changes, id){
+  let formData = new FormData();
+  for(let key in changes){
+    formData.append(key, changes[key]);
+  }
+  return fetch(herokuAPI +'/edit/profile/' + id, {
+    method:'PATCH',
+    body: formData
+  })
+    .then(r => r.json())
+    .then(profile => profile)
+    .catch(error => console.log(error));
+}
+
+

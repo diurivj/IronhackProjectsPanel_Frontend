@@ -9,6 +9,10 @@ import toastr from 'toastr';
 
 class NewStudentsContainer extends Component{
 
+  state = {
+    user: {}
+  };
+
   handleChange = (e) => {
     const {user} = this.state;
     const field = e.target.name;
@@ -48,7 +52,7 @@ class NewStudentsContainer extends Component{
 const mapStateToProps = (state, ownProps) => ({
   students: state.students,
   cohorts: state.cohorts,
-  fetched: state.cohorts !== undefined
+  fetched: state.cohorts !== undefined && state.students !== undefined
 });
 
 const mapDispatchToProps = (dispatch) => ({

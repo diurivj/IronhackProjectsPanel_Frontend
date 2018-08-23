@@ -1,4 +1,4 @@
-const localAPI = "http://localhost:3000/cohort";
+//const localAPI = "http://localhost:3000/cohort";
 const herokuAPI = "https://ironhack-projects.herokuapp.com/cohort";
 
 export function getCohorts() {
@@ -8,7 +8,7 @@ export function getCohorts() {
 }
 
 export function updateCohort(changes, id) {
-  return fetch(localAPI + "/update/" + id, {
+  return fetch(herokuAPI + "/update/" + id, {
     method: 'PATCH',
     headers: {
       "Content-Type": "application/json"

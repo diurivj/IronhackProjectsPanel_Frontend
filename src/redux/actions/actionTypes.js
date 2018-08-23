@@ -3,3 +3,4 @@ export const CREATE_STUDENT = 'CREATE_STUDENT';
 export const UPDATE_STUDENT = 'UPDATE_STUDENT';
 export const GET_COHORTS = 'GET_COHORTS';
 export const UPDATE_COHORT = 'UPDATE_COHORT';
+export const UPDATE_USER = 'UPDATE_USER';

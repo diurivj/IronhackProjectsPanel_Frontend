@@ -1,4 +1,4 @@
-// const localAPI = "http://localhost:3000";
+//const localAPI = "http://localhost:3000/auth";
 const herokuAPI = "https://ironhack-projects.herokuapp.com/auth";
 
 export function logIn(user){
@@ -31,11 +31,21 @@ export function editProfile(changes, id){
     .catch(error => console.log(error));
 }
 
-export function getloggedUser(id){
-  return fetch(herokuAPI + '/loggedUser/' + id)
+export function getLoggedUser(){
+  const token = localStorage.getItem('access_token');
+  return fetch(herokuAPI + '/loggedUser', {
+    headers:{
+      "Authorization": `Bearer ${token}`
+    }
+  })
     .then(r => r.json())
-    .then(user => user)
+    .then(user => {
+      localStorage.setItem('user', JSON.stringify(user));
+      return user;
+    })
     .catch(error => console.log(error))
 }
+
+
 
 

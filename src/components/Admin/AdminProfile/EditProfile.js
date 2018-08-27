@@ -27,7 +27,7 @@ export const EditProfile = ({visible, handleOk, handleCancel, user, handleSubmit
         </Form.Item>
         <Form.Item>
           <div className="dropbox">
-            <Upload.Dragger onChange={handleFile}>
+            <Upload.Dragger onChange={handleFile} >
               <p className="ant-upload-drag-icon"> <Icon type="inbox" /> </p>
               <p className="ant-upload-text">Click or drag your new photo to update it.</p>
             </Upload.Dragger>

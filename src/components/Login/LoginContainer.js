@@ -3,6 +3,9 @@ import {LoginForm} from "./LoginForm";
 import './LoginContainer.css';
 import {logIn} from "../../services/authServices";
 import toastr from 'toastr';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as AdminUsersActions from "../../redux/actions/AdminActions/AdminUsersActions";
 
 class LoginContainer extends Component{
 
@@ -36,7 +39,7 @@ class LoginContainer extends Component{
       let token = r.access_token;
       toastr.success(`Bienvenido ${user.username}`);
       localStorage.setItem('user', JSON.stringify(user));
-      localStorage.setItem('access_token', JSON.stringify(token));
+      localStorage.setItem('access_token', token);
       if (user.role === 'admin') {
         this.props.history.push('/admin');
       } else {
@@ -60,4 +63,8 @@ class LoginContainer extends Component{
   }
 }
 
-export default LoginContainer;
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(AdminUsersActions, dispatch),
+});
+
+export default connect(null, mapDispatchToProps)(LoginContainer);

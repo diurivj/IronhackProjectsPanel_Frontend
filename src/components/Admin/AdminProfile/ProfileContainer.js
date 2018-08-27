@@ -9,23 +9,18 @@ const { Meta } =Card;
 
 class ProfileContainer extends Component{
 
-  componentWillMount(){
-    this.setState({user:JSON.parse(localStorage.getItem('user'))})
-  }
-
   state = {
-    user: {},
     profile: {},
     visible:false
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const {profile, user} = this.state;
+    const {profile} = this.state;
+    const {user} = this.props;
     this.props.actions.updateUserProfile(profile, user._id);
-    this.props.actions.getLoggedUser(user._id);
     toastr.success('Profile edited');
-    this.setState({visible:false})
+    this.setState({visible:false});
   };
 
   handleCancel = () => {
@@ -50,8 +45,10 @@ class ProfileContainer extends Component{
   };
 
   render(){
+    const {visible} = this.state;
+    const {user, fetched} = this.props;
     console.log(this.props);
-    const {user, visible} = this.state;
+    if(!fetched) return <p>loading...</p>;
     return(
       <div style={{display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
 
@@ -80,9 +77,10 @@ class ProfileContainer extends Component{
   }
 }
 
-const mapStateToProps = (state, ownProps) => (
-  {user: state.user}
-);
+const mapStateToProps = (state, ownProps) => ({
+  user: state.user,
+  fetched: state.user !== undefined
+});
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(AdminUsersActions, dispatch),

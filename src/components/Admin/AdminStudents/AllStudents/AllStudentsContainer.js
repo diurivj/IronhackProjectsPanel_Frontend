@@ -11,7 +11,7 @@ class AllStudentsContainer extends Component{
   state = {
     loading: true,
     loadingMore: false,
-    showLoadingMore: true,
+    showLoadingMore: true
   };
 
   render(){

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="404902e1-a347-4cdb-a0a4-59d5be7b833c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminProfile/ProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminProfile/ProfileContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminPanel/AdminRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminPanel/AdminRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsList.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -73,24 +74,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="73" />
+          <entry key="js" value="84" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="73" />
+          <entry key="JavaScript" value="84" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="6556" />
+          <entry key="js" value="7246" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="6556" />
+          <entry key="JavaScript" value="7246" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -103,13 +104,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminProfile/ProfileContainer.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminCohorts/AllCohorts/AllCohortsList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+            <state relative-caret-position="294">
+              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminCohorts/AllCohorts/AllCohortsContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="35" column="3" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/actions/AdminActions/AdminCohortActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -137,8 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Home/HomeContainer.js" />
-        <option value="$PROJECT_DIR$/src/components/NavBar.js" />
         <option value="$PROJECT_DIR$/src/components/Login/LoginForm.js" />
         <option value="$PROJECT_DIR$/src/components/PublicViews/Project3/styles.css" />
         <option value="$PROJECT_DIR$/src/index.css" />
@@ -155,7 +187,6 @@
         <option value="$PROJECT_DIR$/src/components/Admin/AdminStudents/StudentsContainer.js" />
         <option value="$PROJECT_DIR$/src/components/Admin/AdminStudents/StudentsForm.js" />
         <option value="$PROJECT_DIR$/src/components/Admin/AdminStudents/NewStudents/StudentsContainer.js" />
-        <option value="$PROJECT_DIR$/src/components/Admin/AdminPanel/AdminRoutes.js" />
         <option value="$PROJECT_DIR$/src/redux/actions/AdminActions/AdminStudentsActions.js" />
         <option value="$PROJECT_DIR$/src/redux/store/configureStore.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers/loginReducer.js" />
@@ -167,8 +198,6 @@
         <option value="$PROJECT_DIR$/src/redux/actions/AdminActions/AdminStudentActions.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers/AdminReducers/AdminStudentsReducer.js" />
         <option value="$PROJECT_DIR$/src/components/PublicViews/Project3/ListPage.js" />
-        <option value="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsList.js" />
-        <option value="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsContainer.js" />
         <option value="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsSearch.js" />
         <option value="$PROJECT_DIR$/src/components/Admin/AdminPublish/PublishContainer.js" />
         <option value="$PROJECT_DIR$/src/components/Admin/AdminPanel/MenuPanel.js" />
@@ -188,6 +217,11 @@
         <option value="$PROJECT_DIR$/src/services/authServices.js" />
         <option value="$PROJECT_DIR$/src/redux/actions/AdminActions/AdminUsersActions.js" />
         <option value="$PROJECT_DIR$/src/components/Admin/AdminProfile/ProfileContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/Admin/AdminPanel/AdminRoutes.js" />
+        <option value="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsList.js" />
+        <option value="$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/Admin/AdminCohorts/AllCohorts/AllCohortsContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/Admin/AdminCohorts/AllCohorts/AllCohortsList.js" />
       </list>
     </option>
   </component>
@@ -251,7 +285,67 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminProfile" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminCohorts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ironhack_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ironhack_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminCohorts" type="462c0819:PsiDirectoryNode" />
+              <item name="AllCohorts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ironhack_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ironhack_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminStudents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ironhack_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ironhack_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminStudents" type="462c0819:PsiDirectoryNode" />
+              <item name="AllStudents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ironhack_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ironhack_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ironhack_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ironhack_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ironhack_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ironhack_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminActions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ironhack_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ironhack_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ironhack_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ironhack_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -313,12 +407,12 @@
       <workItem from="1535038446702" duration="713000" />
       <workItem from="1535039487985" duration="4586000" />
       <workItem from="1535388925469" duration="7732000" />
-      <workItem from="1535411193636" duration="238000" />
+      <workItem from="1535411193636" duration="1242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82102000" />
+    <option name="totallyTimeSpent" value="83106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -373,16 +467,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/logo.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -478,13 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminPanel/AdminRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -544,6 +621,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -564,27 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsSearch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/actions/AdminActions/AdminStudentActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -596,6 +655,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -605,16 +667,6 @@
           <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/rootReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -653,24 +705,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/cohortServices.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/studentServices.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/actions/AdminActions/AdminCohortActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -691,12 +729,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminProfile/ProfileContainer.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsSearch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        <state relative-caret-position="336">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminPanel/AdminRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminProfile/ProfileContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1701">
+          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/cohortServices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/rootReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/AdminActions/AdminCohortActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminStudents/AllStudents/AllStudentsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminCohorts/AllCohorts/AllCohortsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="35" column="3" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/AdminCohorts/AllCohorts/AllCohortsList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

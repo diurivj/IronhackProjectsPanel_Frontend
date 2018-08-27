@@ -6,7 +6,6 @@ const AllStudentsList = ({students}) => {
   let loading = false;
   //let loadingMore = false;
   //let showLoadingMore = true;
-  console.log(students);
 
   return(
      <List style={{textAlign: 'left', width: '100%', height: '50vh', overflow: 'scroll', marginTop: '50px'}} className="demo-loadmore-list" loading={loading} itemLayout="horizontal" dataSource={students} renderItem={item => (

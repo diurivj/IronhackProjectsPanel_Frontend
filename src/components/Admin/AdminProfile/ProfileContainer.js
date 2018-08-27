@@ -23,6 +23,7 @@ class ProfileContainer extends Component{
     e.preventDefault();
     const {profile, user} = this.state;
     this.props.actions.updateUserProfile(profile, user._id);
+    this.props.actions.getLoggedUser(user._id);
     toastr.success('Profile edited');
     this.setState({visible:false})
   };
@@ -49,6 +50,7 @@ class ProfileContainer extends Component{
   };
 
   render(){
+    console.log(this.props);
     const {user, visible} = this.state;
     return(
       <div style={{display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
@@ -78,8 +80,12 @@ class ProfileContainer extends Component{
   }
 }
 
+const mapStateToProps = (state, ownProps) => (
+  {user: state.user}
+);
+
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(AdminUsersActions, dispatch),
 });
 
-export default connect(null, mapDispatchToProps)(ProfileContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileContainer);

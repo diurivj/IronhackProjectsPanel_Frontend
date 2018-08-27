@@ -31,4 +31,11 @@ export function editProfile(changes, id){
     .catch(error => console.log(error));
 }
 
+export function getloggedUser(id){
+  return fetch(herokuAPI + '/loggedUser/' + id)
+    .then(r => r.json())
+    .then(user => user)
+    .catch(error => console.log(error))
+}
+
 

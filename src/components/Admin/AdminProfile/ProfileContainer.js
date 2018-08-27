@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Card, Icon } from 'antd';
+import { Card, Spin, Icon } from 'antd';
 import { EditProfile } from "./EditProfile";
 import toastr from 'toastr';
 import {connect} from 'react-redux';
@@ -47,8 +47,8 @@ class ProfileContainer extends Component{
   render(){
     const {visible} = this.state;
     const {user, fetched} = this.props;
-    console.log(this.props);
-    if(!fetched) return <p>loading...</p>;
+    console.log(fetched);
+    if(!fetched) return <Spin/>;
     return(
       <div style={{display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
 
@@ -77,7 +77,7 @@ class ProfileContainer extends Component{
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state) => ({
   user: state.user,
   fetched: state.user !== undefined
 });

@@ -18,3 +18,15 @@ export function updateCohort(changes, id) {
     .then(r => r.json())
     .then(cohort => cohort)
 }
+
+export function createCohort(cohort) {
+  return fetch(herokuAPI + "/create_new", {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(cohort)
+  })
+    .then(r => r.json())
+    .then(cohort => cohort)
+}

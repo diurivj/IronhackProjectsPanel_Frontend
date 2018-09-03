@@ -22,15 +22,15 @@ class MenuPanel extends Component{
             <img src={logo} alt="logoironhack" width="80%" />
           </Menu.Item>
 
-          {/*<Menu.Item key='/admin'>*/}
-            {/*<Link to="/admin">*/}
-              {/*<Icon type="global" /><span>Public Projects</span>*/}
-            {/*</Link>*/}
-          {/*</Menu.Item>*/}
-
           <Menu.Item key="/admin">
             <Link to="/admin">
               <Icon type="profile" /><span>Profile</span>
+            </Link>
+          </Menu.Item>
+
+          <Menu.Item key="/admin/users/new">
+            <Link to="/admin/users/new">
+              <Icon type="smile-o" /><span>New User</span>
             </Link>
           </Menu.Item>
 

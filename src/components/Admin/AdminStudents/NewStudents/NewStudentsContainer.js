@@ -27,8 +27,9 @@ class NewStudentsContainer extends Component{
   };
 
   handleSubmit = (e) => {
-    const {user} = this.state;
     e.preventDefault();
+    const {user} = this.state;
+    console.log(user);
     //here i got all the information of the new student, ready for dispatch the action
     this.props.actions.createStudent(user);
     toastr.success('New student successfully created');

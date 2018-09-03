@@ -5,12 +5,14 @@ import NewStudentsContainer from "../AdminStudents/NewStudents/NewStudentsContai
 import AllStudentsContainer from "../AdminStudents/AllStudents/AllStudentsContainer";
 import AllCohortsContainer from "../AdminCohorts/AllCohorts/AllCohortsContainer";
 import NewCohortsContainer from "../AdminCohorts/NewCohorts/NewCohortsContainer";
+import NewUsersContainer from "../AdminUsers/NewUsersContainer";
 
 class AdminRoutes extends Component{
   render(){
     return(
       <Switch>
         <Route exact path='/admin' component={ProfileContainer} />
+        <Route path='/admin/users/new' component={NewUsersContainer} />
         <Route path='/admin/students/all' component={AllStudentsContainer} />
         <Route path='/admin/students/new' component={NewStudentsContainer} />
         <Route path='/admin/cohorts/all' component={AllCohortsContainer} />

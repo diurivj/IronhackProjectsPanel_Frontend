@@ -1,6 +1,18 @@
 //const localAPI = "http://localhost:3000/auth";
 const herokuAPI = "https://ironhack-projects.herokuapp.com/auth";
 
+export function signUp(user){
+  return fetch(herokuAPI + '/signup', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(user)
+  })
+    .then(r => r.json())
+    .then(user => user)
+}
+
 export function logIn(user){
   return fetch(herokuAPI + '/login', {
     method: 'POST',

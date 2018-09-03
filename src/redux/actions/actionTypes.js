@@ -8,4 +8,5 @@ export const CREATE_COHORT = 'CREATE_COHORT';
 export const UPDATE_COHORT = 'UPDATE_COHORT';
 //USERS
 export const GET_USER = "GET_USER";
+export const CREATE_USER = "CREATE_USER";
 export const UPDATE_USER = 'UPDATE_USER';

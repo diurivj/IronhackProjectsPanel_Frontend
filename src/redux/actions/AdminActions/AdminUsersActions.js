@@ -2,6 +2,10 @@ import * as types from '../actionTypes';
 import * as userServices from '../../../services/authServices';
 
 //actions
+export const createUserSuccess = (user) => (
+  { type: types.CREATE_USER, user }
+);
+
 export const getLoggedUserSuccess = (user) => (
   { type: types.GET_USER, user }
 );
@@ -23,5 +27,13 @@ export const updateUserProfile = (changes, id) => (dispatch) => {
 export const getLoggedUser = () => (dispatch) => {
   userServices.getLoggedUser()
     .then(user => dispatch(getLoggedUserSuccess(user)))
+    .catch(error => console.log(error))
+};
+
+export const createUser = (user) => (dispatch) => {
+  userServices.signUp(user)
+    .then(newUser => {
+      dispatch(createUserSuccess(newUser))
+    })
     .catch(error => console.log(error))
 };

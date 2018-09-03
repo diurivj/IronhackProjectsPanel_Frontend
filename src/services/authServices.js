@@ -58,6 +58,21 @@ export function getLoggedUser(){
     .catch(error => console.log(error))
 }
 
+export function updatePassword(passwordandtoken){
+  return fetch(herokuAPI + '/invitation', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(passwordandtoken)
+  })
+    .then(r => {
+      return r.json();
+    })
+    .then(user => {
+      return user;
+    });
+}
 
 
 

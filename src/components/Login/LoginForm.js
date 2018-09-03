@@ -19,7 +19,7 @@ export const LoginForm = ({onSubmit}) => {
             <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Contraseña" name="password" />
           </FormItem>
           <FormItem>
-            <Button type="primary" htmlType="submit" className="login-form-button" style={{width: '100%', marginTop: '20px'}}>Ingresar</Button>
+            <Button type="primary" htmlType="submit" className="login-form-button" style={{width: '100%', marginTop: '20px'}}>Login</Button>
           </FormItem>
         </Form>
       </Card>

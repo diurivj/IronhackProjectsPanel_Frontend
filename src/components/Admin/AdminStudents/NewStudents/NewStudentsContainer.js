@@ -5,12 +5,15 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as AdminStudentActions from '../../../../redux/actions/AdminActions/AdminStudentActions';
 import * as AdminCohortActions from '../../../../redux/actions/AdminActions/AdminCohortActions';
+import * as AdminUserActions from '../../../../redux/actions/AdminActions/AdminUsersActions';
 import toastr from 'toastr';
 
 class NewStudentsContainer extends Component{
 
   state = {
-    user: {}
+    user: {
+      password: 'pollollon'
+    }
   };
 
   handleChange = (e) => {
@@ -29,10 +32,13 @@ class NewStudentsContainer extends Component{
   handleSubmit = (e) => {
     e.preventDefault();
     const {user} = this.state;
+    user['username'] = user.name;
     console.log(user);
     //here i got all the information of the new student, ready for dispatch the action
+    this.props.actions.createUser(user);
     this.props.actions.createStudent(user);
     toastr.success('New student successfully created');
+
   };
 
   render(){
@@ -51,13 +57,14 @@ class NewStudentsContainer extends Component{
 }
 
 const mapStateToProps = (state, ownProps) => ({
+  user: state.user,
   students: state.students,
   cohorts: state.cohorts,
   fetched: state.cohorts !== undefined && state.students !== undefined
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({...AdminStudentActions, ...AdminCohortActions}, dispatch),
+  actions: bindActionCreators({...AdminStudentActions, ...AdminCohortActions, ...AdminUserActions}, dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewStudentsContainer);

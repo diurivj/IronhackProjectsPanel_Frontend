@@ -14,6 +14,10 @@ export const updateUserProfileSuccess = (profile) => (
   { type: types.UPDATE_USER, profile }
 );
 
+export const updatePasswordSuccess = (password) => (
+  { type: types.UPDATE_PASSWORD, password}
+);
+
 //thunks
 export const updateUserProfile = (changes, id) => (dispatch) => {
   userServices.editProfile(changes, id)
@@ -36,4 +40,12 @@ export const createUser = (user) => (dispatch) => {
       dispatch(createUserSuccess(newUser))
     })
     .catch(error => console.log(error))
+};
+
+export const updatePassword = (password) => (dispatch) => {
+ userServices.updatePassword(password)
+   .then(userUpdated => {
+     dispatch(updatePasswordSuccess(userUpdated))
+   })
+   .catch(error => console.log(error))
 };

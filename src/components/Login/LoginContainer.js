@@ -19,8 +19,8 @@ class LoginContainer extends Component{
       this.setState({isLogged:true});
       if (user.role === 'admin') {
         this.props.history.push('/admin')
-      } else if (user.role === 'user') {
-        this.props.history.push('/user')
+      } else if (user.role === 'student') {
+        this.props.history.push('/student')
       }
     } else {
       this.setState({isLogged:false})
@@ -43,7 +43,10 @@ class LoginContainer extends Component{
       if (user.role === 'admin') {
         this.props.history.push('/admin');
       } else {
-        this.props.history.push('/user');
+        //checar si ya cambio su contraseña
+        if (!user.active) return this.props.history.push('/update_password');
+          return this.props.history.push('/student');
+
       }
     })
     .catch(error => {

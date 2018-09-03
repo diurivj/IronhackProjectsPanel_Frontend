@@ -9,6 +9,8 @@ export default function adminUsersReducer(state = initialState.user, action){
       return {...action.user};
     case types.UPDATE_USER:
       return {...action.user};
+    case types.UPDATE_PASSWORD:
+      return {...action.user};
     default:
       return {...state};
   }

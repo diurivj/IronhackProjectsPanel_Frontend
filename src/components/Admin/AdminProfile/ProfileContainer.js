@@ -47,7 +47,6 @@ class ProfileContainer extends Component{
   render(){
     const {visible} = this.state;
     const {user, fetched} = this.props;
-    console.log(fetched);
     if(!fetched) return <Spin/>;
     return(
       <div style={{display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>

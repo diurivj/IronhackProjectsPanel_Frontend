@@ -12,6 +12,6 @@ export const checkUser = () => (dispatch) => {
     dispatch(loadStudents());
   } else {
     //dist actions
-    console.log('it works?');
+    dispatch(getLoggedUser());
   }
 };

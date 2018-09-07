@@ -40,6 +40,7 @@ class LoginContainer extends Component{
       toastr.success(`Bienvenido ${user.username}`);
       localStorage.setItem('user', JSON.stringify(user));
       localStorage.setItem('access_token', token);
+      this.props.actions.getLoggedUser(user);
       if (user.role === 'admin') {
         this.props.history.push('/admin');
       } else {
@@ -50,7 +51,6 @@ class LoginContainer extends Component{
       }
     })
     .catch(error => {
-      console.log(error);
       toastr.error('Revisa tu correo y/o contraseña');
     })
   };

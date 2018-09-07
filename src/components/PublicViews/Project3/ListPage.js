@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
 import {Card, Collapse, Icon, Button} from "antd";
-import {getStudents} from "../../../services/studentServices";
+//import {getStudents} from "../../../services/studentServices";
+import {getCohortProjects} from "../../../services/studentServices";
+
 const Panel = Collapse.Panel;
-const cohort = "5b6a232240e0410b18021767";
+const cohort = "5b897ecaf4c4f4001462b4bd";
 
 class ListPage extends Component{
 
   componentWillMount(){
-    getStudents(cohort)
+    getCohortProjects(cohort)
       .then(students => {
+        console.log(students);
         this.setState({students})
       })
       .catch(e => console.log(e))
@@ -18,7 +21,7 @@ class ListPage extends Component{
     students: []
   };
 
-  handleClick=()=>{
+  handleClick = () => {
     this.props.history.goBack()
   };
 

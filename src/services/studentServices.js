@@ -19,3 +19,9 @@ export function getStudents() {
     .then(students => students)
 }
 
+export function getCohortProjects(cohort) {
+  return fetch(herokuAPI + '/cohort/' + cohort)
+    .then(projects => projects.json())
+    .then(projects => projects)
+}
+

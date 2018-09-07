@@ -1,5 +1,6 @@
 export default {
   students: [],
   cohorts: [],
-  user: {}
+  user: {},
+  project: {}
 }

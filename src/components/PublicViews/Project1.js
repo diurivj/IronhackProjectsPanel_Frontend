@@ -35,13 +35,13 @@ class Project1 extends Component{
 
               {students.map(student => {
                 console.log(student);
-                let projects = [{presentation_slides:'nada', deployed_site:'nada', github_repo:['nada']}];
-                if(student.project) projects = student.projects[0];
+                const title = student.projects[0].title;
+                const projects = student.projects[0];
                 return(
                   <Panel header={student.username} key={student._id} >
                     <Icon type="desktop" /> <a rel="noopener noreferrer" href={projects.presentation_slides} target="_blank" >Slides</a>
                     <br />
-                    <Icon type="code" /> <a rel="noopener noreferrer" href={projects.deployed_site} target="_blank" >{projects.title}</a>
+                    <Icon type="code" /> <a rel="noopener noreferrer" href={projects.deployed_site} target="_blank" >{title}</a>
                     <br />
                     <Icon type="github" /> <a rel="noopener noreferrer" href={projects.github_repo} target="_blank" >Github</a>
                   </Panel>

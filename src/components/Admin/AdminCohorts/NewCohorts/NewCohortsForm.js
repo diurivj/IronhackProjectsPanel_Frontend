@@ -1,17 +1,15 @@
 import React from 'react';
-import {Form, DatePicker, Input, InputNumber, Button} from "antd";
+import {Form, DatePicker, Input, Button} from "antd";
 
-export const NewCohortsForm = ({handleSubmit, onChangeDate, handleChange, onChangeGeneration}) => {
+export const NewCohortsForm = ({handleSubmit, onChangeDate, handleChange}) => {
   return(
     <Form onSubmit={handleSubmit} style={{width: '300px'}}>
       <Form.Item>
         <Input placeholder="Name of the cohort" name='name' onChange={handleChange} style={{width:'70%'}} />
       </Form.Item>
+      <p style={{color:'lightgray'}}>Example: Web Dev FT Junio 2018</p>
       <Form.Item>
         <DatePicker onChange={onChangeDate} placeholder="Start of the cohort" style={{width:'70%'}}/>
-      </Form.Item>
-      <Form.Item>
-        <InputNumber min={1} max={100} onChange={onChangeGeneration} style={{width:'70%'}} placeholder="Generation"/>
       </Form.Item>
       <Form.Item>
         <Button type="primary" htmlType="submit" className="login-form-button">Create</Button>

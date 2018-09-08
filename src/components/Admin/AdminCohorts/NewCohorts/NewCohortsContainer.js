@@ -18,12 +18,6 @@ class NewCohortsContainer extends Component{
     this.setState({...cohort});
   };
 
-  onChangeGeneration = (value) => {
-    const {cohort} = this.state;
-    cohort.generation = value;
-    this.setState({...cohort});
-  };
-
   handleChange = (e) => {
     const {cohort} = this.state;
     cohort.name = e.target.value;
@@ -47,7 +41,6 @@ class NewCohortsContainer extends Component{
               handleSubmit={this.handleSubmit}
               onChangeDate={this.onChangeDate}
               handleChange={this.handleChange}
-              onChangeGeneration={this.onChangeGeneration}
             />
           </div>
         </Card>

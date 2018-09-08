@@ -15,7 +15,6 @@ const AllCohortsList = ({cohorts}) => {
           title={<a href="https://ant.design">{item.name} </a>}
           description={item.date}
         />
-        <p>Generation {item.generation}</p>
       </List.Item>
     )}/>
   )

@@ -19,7 +19,7 @@ class Project1 extends Component{
   render(){
     const {students} = this.state;
     console.log(students);
-    if (students === undefined) return <p>Loading</p>
+    if (students === undefined) return <p>Loading</p>;
     return (
       <div style={{backgroundColor:'#181B23'}}>
         <div style={{display:'flex', alignItems:'center', justifyContent:'center', width: '100vw', height: '100vh'}}>
@@ -35,8 +35,8 @@ class Project1 extends Component{
 
               {students.map(student => {
                 console.log(student);
-                const title = student.projects[0].title;
-                const projects = student.projects[0];
+                const title = student.projects[0] ? student.projects[0].title : "";
+                const projects = student.projects[0] ? student.projects[0] : {};
                 return(
                   <Panel header={student.username} key={student._id} >
                     <Icon type="desktop" /> <a rel="noopener noreferrer" href={projects.presentation_slides} target="_blank" >Slides</a>

@@ -12,7 +12,7 @@ const AllCohortsList = ({cohorts}) => {
       <List.Item actions={[<Icon type="edit" style={{margin: '10px'}}/>, <Icon type="delete" style={{margin: '10px', color: 'red'}}/>]}>
         <List.Item.Meta
           avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-          title={<a href="https://ant.design">{item.name} </a>}
+          title={<a href={`/cohort/${item._id}/project1`}>{item.name} </a>}
           description={item.date}
         />
       </List.Item>

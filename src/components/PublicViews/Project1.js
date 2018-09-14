@@ -23,7 +23,7 @@ class Project1 extends Component{
     return (
       <div style={{backgroundColor:'#181B23'}}>
         <div style={{display:'flex', alignItems:'center', justifyContent:'center', width: '100vw', height: '100vh'}}>
-          <Card style={{width: '60%', height: '90%'}} hoverable={true} cover={<img src={photo} alt="ironhackers"/>}>
+          <Card style={{width: '60%', height: '90%'}} hoverable={true} cover={<img src="https://lh3.google.com/u/1/d/1U1G6GwNC7tXQQWGZzsCaOuslTA0QUja5=w2880-h1606-iv1" alt="ironhackers"/>}>
             <h1>Projecto 1 - The Game</h1>
             <Button onClick={() => this.refs.list.scrollIntoView({ block: 'end',  behavior: 'smooth' })}>Ver proyectos<Icon type="down-circle" theme="twoTone" /></Button>
           </Card>

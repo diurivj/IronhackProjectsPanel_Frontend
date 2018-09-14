@@ -28,6 +28,7 @@ class Project1Container extends Component{
   };
 
   render(){
+    console.log(this.props);
     return(
       <div style={{display:'flex', alignItems:'center', justifyContent:'center', width:'100vw', height:'100vh', flexGrow: '1', flexWrap:'wrap'}}>
         <div style={{width:'100%', margin: '5px 1%', height:'15%' }}>

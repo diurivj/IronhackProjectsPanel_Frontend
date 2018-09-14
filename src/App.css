@@ -35,3 +35,18 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets/landing.jpg") no-repeat;
+  background-size: cover;
+}
+
+.home-container > * {
+  margin-top: 50px;
+  margin-left: 460px;
+}

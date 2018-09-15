@@ -1,6 +1,7 @@
 import {loadCohorts} from "./AdminActions/AdminCohortActions";
 import {loadStudents} from "./AdminActions/AdminStudentActions";
 import {getLoggedUser} from "./AdminActions/AdminUsersActions";
+import {loadUserProjects} from "./AdminActions/AdminProjectActions";
 
 export const checkUser = () => (dispatch) => {
   if (!localStorage.getItem('user')) return;
@@ -10,8 +11,10 @@ export const checkUser = () => (dispatch) => {
     dispatch(getLoggedUser());
     dispatch(loadCohorts());
     dispatch(loadStudents());
+      dispatch(loadUserProjects(user._id));
   } else {
     //dist actions
     dispatch(getLoggedUser());
+    dispatch(loadUserProjects(user._id));
   }
 };

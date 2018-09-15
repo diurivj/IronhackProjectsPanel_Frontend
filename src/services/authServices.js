@@ -1,5 +1,7 @@
 //const localAPI = "http://localhost:3000/auth";
-const herokuAPI = "https://ironhack-projects.herokuapp.com/auth";
+import {base_url} from "../variables";
+
+const herokuAPI = `${base_url}/auth`;
 
 export function signUp(user){
   return fetch(herokuAPI + '/signup', {

@@ -1,5 +1,6 @@
-// const localAPI = "http://localhost:3000/student";
-const herokuAPI = "https://ironhack-projects.herokuapp.com/student";
+import {base_url} from "../variables";
+
+const herokuAPI = `${base_url}/student`;
 
 export function createStudent(student) {
   return fetch(herokuAPI + '/create_new', {

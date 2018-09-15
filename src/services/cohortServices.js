@@ -1,5 +1,6 @@
-//const localAPI = "http://localhost:3000/cohort";
-const herokuAPI = "https://ironhack-projects.herokuapp.com/cohort";
+import {base_url} from "../variables";
+
+const herokuAPI = `${base_url}/cohort`;
 
 export function getCohorts() {
   return fetch(herokuAPI + "/all")

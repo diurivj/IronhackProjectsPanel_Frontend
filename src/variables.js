@@ -1,0 +1,1 @@
+export const base_url = window.location.host === "localhost:3001" ? "http://localhost:3000" : "https://ironhack-projects.herokuapp.com";

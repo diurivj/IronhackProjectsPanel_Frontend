@@ -61,7 +61,7 @@ export function getLoggedUser(){
 }
 
 export function updatePassword(passwordandtoken){
-  return fetch(herokuAPI + '/invitation', {
+  return fetch(herokuAPI + '/change_password', {
     method: 'POST',
     headers: {
       "Content-Type": "application/json"
@@ -74,6 +74,19 @@ export function updatePassword(passwordandtoken){
     .then(user => {
       return user;
     });
+}
+
+export function checkForRecoverPassword(email){
+  return fetch(herokuAPI + '/recover_password', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(email)
+  })
+    .then(r => r.json())
+    .then(user => user)
+    .catch(e => console.log(e.response))
 }
 
 

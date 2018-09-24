@@ -11,9 +11,7 @@ import toastr from 'toastr';
 class NewStudentsContainer extends Component{
 
   state = {
-    user: {
-      password: 'pollollon'
-    }
+    user: {}
   };
 
   handleChange = (e) => {

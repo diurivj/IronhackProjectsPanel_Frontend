@@ -1,28 +1,25 @@
-import React, {Component} from 'react';
-import {Card, Icon, Input, Form, Button} from 'antd';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as AdminUserActions from '../../redux/actions/AdminActions/AdminUsersActions'
-import toastr from 'toastr';
+import React, { Component } from 'react';
+import {Form, Button, Card, Icon, Input} from "antd";
+import connect from "react-redux/es/connect/connect";
+import {bindActionCreators} from "redux";
+import * as AdminUserActions from "../../redux/actions/AdminActions/AdminUsersActions";
+import toastr from "toastr";
 
-class UpdatePassword extends Component{
-  
-  componentWillMount() {
-    this.setState({user: JSON.parse(localStorage.getItem('user'))})
-  }
+class ResetPassword extends Component{
+
+  state = {};
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const {user} = this.state;
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         const info = {
-          token: user.tokenToActive,
+          token: this.props.match.params.token,
           password: values.password
         };
         this.props.actions.updatePassword(info);
         toastr.success('Password updated');
-        this.props.history.push('/student');
+        this.props.history.push('/login');
       }
     });
   };
@@ -49,15 +46,12 @@ class UpdatePassword extends Component{
     callback();
   };
 
-
   render(){
-
     const { getFieldDecorator } = this.props.form;
-    const {user} = this.state;
-    const greeting = 'Welcome ' + user.username;
+    console.log(this.props.match.params.token);
     return(
       <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100vh'}}>
-        <Card hoverable={true} title={greeting} style={{ width: '300px' }}>
+        <Card hoverable={true} title='Reset your password' style={{ width: '300px' }}>
           <p>Update your password</p>
           <Form onSubmit={this.handleSubmit}>
             <Form.Item>
@@ -96,5 +90,5 @@ const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(AdminUserActions, dispatch),
 });
 
-const wrappedForm = Form.create()(UpdatePassword);
+const wrappedForm = Form.create()(ResetPassword);
 export default connect(null, mapDispatchToProps)(wrappedForm);

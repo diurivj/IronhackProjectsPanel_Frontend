@@ -8,6 +8,8 @@ import HomeContainer from "./components/Home/HomeContainer";
 import UpdatePassword from "./components/Login/UpdatePassword";
 import StudentContainerPanel from "./components/Student/StudentPanel/StudentContainerPanel";
 import Project1 from "./components/PublicViews/Project1";
+import RecoverPassword from "./components/Login/RecoverPassword";
+import ResetPassword from "./components/Login/ResetPassword";
 
 export const Routes = () => (
   <Switch>
@@ -19,5 +21,7 @@ export const Routes = () => (
     <Route exact path='/' component={HomeContainer} />
     <Route exact path='/update_password' component={UpdatePassword} />
     <Route path='/cohort/:id/project1' component={Project1} />
+    <Route exact path='/password_recovery' component={RecoverPassword} />
+    <Route path='/reset_password/:token' component={ResetPassword} />
   </Switch>
 );

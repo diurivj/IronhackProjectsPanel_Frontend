@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Icon, Input, Button, Card } from 'antd';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/ironhack.png'
 import './LoginContainer.css';
 const FormItem = Form.Item;
@@ -22,6 +23,10 @@ export const LoginForm = ({onSubmit}) => {
             <Button type="primary" htmlType="submit" className="login-form-button" style={{width: '100%', marginTop: '20px'}}>Login</Button>
           </FormItem>
         </Form>
+        <p>Forgot your password?</p>
+        <Link to='/password_recovery'>
+          <Button>Recover it</Button>
+        </Link>
       </Card>
     </div>
   )

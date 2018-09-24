@@ -6,7 +6,7 @@ import * as AdminUserActions from '../../redux/actions/AdminActions/AdminUsersAc
 import toastr from 'toastr';
 
 class UpdatePassword extends Component{
-  
+
   componentWillMount() {
     this.setState({user: JSON.parse(localStorage.getItem('user'))})
   }

@@ -15,7 +15,13 @@ export function createProject(project) {
 }
 
 export function getUserProjects(id){
-    return fetch(`${herokuAPI}/student/${id}`)
-        .then(r => r.json())
-        .then(projects => projects);
+  return fetch(`${herokuAPI}/student/${id}`)
+    .then(r => r.json())
+    .then(projects => projects);
+}
+
+export function getCohortProjects(cohort, projcet){
+  return fetch(herokuAPI + `/${cohort}/project/${projcet}`)
+    .then(r => r.json())
+    .then(projects => projects);
 }

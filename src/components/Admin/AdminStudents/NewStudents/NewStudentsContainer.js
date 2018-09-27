@@ -34,7 +34,7 @@ class NewStudentsContainer extends Component{
     console.log(user);
     //here i got all the information of the new student, ready for dispatch the action
     this.props.actions.createUser(user);
-    this.props.actions.createStudent(user);
+    //this.props.actions.createStudent(user);
     toastr.success('New student successfully created');
 
   };

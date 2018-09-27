@@ -10,6 +10,7 @@ import StudentContainerPanel from "./components/Student/StudentPanel/StudentCont
 import Project1 from "./components/PublicViews/Project1";
 import RecoverPassword from "./components/Login/RecoverPassword";
 import ResetPassword from "./components/Login/ResetPassword";
+import DraggableContainer from "./components/Draggable/DraggableContainer";
 
 export const Routes = () => (
   <Switch>
@@ -23,5 +24,6 @@ export const Routes = () => (
     <Route path='/cohort/:id/project1' component={Project1} />
     <Route exact path='/password_recovery' component={RecoverPassword} />
     <Route path='/reset_password/:token' component={ResetPassword} />
+    <Route path='/test' component={DraggableContainer}/>
   </Switch>
 );

@@ -36,44 +36,36 @@ class DraggableContainer extends Component{
   }
 
   onDragEnd = result => {
-    const { destination, source, draggableId } = result;
+    const { destination, source } = result;
 
     if (!destination) {
+      console.log('está fuera de la columna');
       return;
     }
 
-    if (
-      destination.droppableId === source.droppableId &&
-      destination.index === source.index
-    ) {
+    if (destination.droppableId === source.droppableId && destination.index === source.index) {
+      console.log('es el mismo lugar de inicio');
       return;
     }
 
-    const column = this.state.dataAPI.columns[source.droppableId];
-    console.log(column);
-    const newTaskIds = Array.from(column.taskIds);
-    newTaskIds.splice(source.index, 1);
-    newTaskIds.splice(destination.index, 0, draggableId);
+    const sourceIndex = result.source.index;
+    const destinationIndex = result.destination.index;
 
-    const newColumn = {
-      ...column,
-      taskIds: newTaskIds,
-    };
+    const {columns} = this.state.dataAPI;
+    const item = columns['column-1'].taskIds[sourceIndex];
 
-    const newState = {
-      ...this.state.dataAPI,
-      columns: {
-        ...this.state.dataAPI.columns,
-        [newColumn.id]: newColumn,
-      },
-    };
+    columns['column-1'].taskIds.splice(sourceIndex, 1);
+    columns['column-1'].taskIds.splice(destinationIndex, 0, item);
 
-    this.setState(newState);
+    this.setState(columns);
+    console.log(columns['column-1'].taskIds);
   };
 
   render(){
     const {dataAPI} = this.state;
+    const {columns} = this.state.dataAPI;
     if(dataAPI.columnOrder === undefined) return <p>Loading ...</p>;
+    console.log(columns['column-1'].taskIds);
     return (
       <div style={{width: '100vw', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2D354C'}}>
         <DragDropContext onDragEnd={this.onDragEnd}>

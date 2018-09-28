@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import { Draggable } from 'react-beautiful-dnd';
+import { Collapse, Icon } from "antd";
+const Panel = Collapse.Panel;
 
 const Container = styled.div`
   border: 1px solid lightgrey;
@@ -11,12 +13,20 @@ const Container = styled.div`
 `;
 
 export default class Task extends Component{
-  render(){
+  render() {
     return (
-      <Draggable draggableId={this.props.task.id} index={this.props.index}>
+      <Draggable draggableId={this.props.task._id} index={this.props.index}>
         {(provided, snapshot) => (
           <Container{...provided.draggableProps} {...provided.dragHandleProps} innerRef={provided.innerRef} isDragging={snapshot.isDragging}>
-            {this.props.task.content}
+            <Collapse className="contain" bordered={false} style={{ textAlign: "left", fontSize: "1.2em", width: "100%" }} >
+              <Panel header={this.props.task.title} key={this.props.task._id} >
+                <Icon type="desktop" /> <a href={this.props.task.presentation_slides} target='_blank'>Slides</a>
+                <br />
+                <Icon type="code" /> <a rel="noopener noreferrer" href={this.props.task.deployed_site} target="_blank" >Deployed Site</a>
+                <br />
+                <Icon type="github" /> <a rel="noopener noreferrer"  href={this.props.task.github_repo[0]} target="_blank" >Github</a>
+              </Panel>
+            </Collapse>
           </Container>
         )}
       </Draggable>

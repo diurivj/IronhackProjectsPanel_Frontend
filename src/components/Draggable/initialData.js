@@ -1,8 +1,3 @@
-import {getCohortProjects} from "../../services/projectServices";
-
-let dataAPI = {};
-let arr = [];
-
 const initialData = {
   tasks: {
     'task-1': { id: 'task-1', content: 'Take out the garbage' },
@@ -21,27 +16,29 @@ const initialData = {
   columnOrder: ['column-1'],
 };
 
-getCohortProjects('5b897ecaf4c4f4001462b4bd', 2)
-  .then(result => {
-    result.map(r => {
-      arr.push(r.title);
-      return arr;
-    });
-    dataAPI = {
-      ...result,
-      columns: {
-        'column-1': {
-          id: 'column-1',
-          title: 'Projects',
-          taskIds: arr
-        },
-        columnOrder: ['column-1']
-      }
-    };
-    //console.log(dataAPI)
-  })
-  .catch(e => console.log(e));
+export default initialData;
 
-
-export default dataAPI;
-//export default initialData;
+/*componentWillMount() {
+  const {arr} = this.state;
+  getCohortProjects('5b897ecaf4c4f4001462b4bd', 2)
+    .then(result => {
+      result.map(r => {
+        arr.push(r.title);
+        return arr;
+      });
+      this.setState({
+        dataAPI: {
+          tasks: {...result},
+          columns: {
+            'column-1': {
+              id: 'column-1',
+              title: 'Projects',
+              taskIds: arr
+            }
+          },
+          columnOrder: ['column-1']
+        }
+      })
+    })
+    .catch(e => console.log(e));
+}*/

@@ -22,8 +22,8 @@ class Project1Container extends Component{
     const student = JSON.parse(localStorage.getItem(('user')));
     const {project} = this.state;
     project.student = JSON.parse(localStorage.getItem('user'))._id;
-    project.number_project = 1;
     project['cohort'] = student.cohort;
+    project['number_project'] = 1;
     this.props.actions.createProject(project);
     toastr.success('Project 1 Saved');
     this.props.history.push('/student');

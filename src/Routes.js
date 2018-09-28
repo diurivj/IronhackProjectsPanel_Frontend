@@ -24,6 +24,6 @@ export const Routes = () => (
     <Route path='/cohort/:id/project1' component={Project1} />
     <Route exact path='/password_recovery' component={RecoverPassword} />
     <Route path='/reset_password/:token' component={ResetPassword} />
-    <Route path='/test' component={DraggableContainer}/>
+    <Route path='/project/:project/:cohort' component={DraggableContainer}/>
   </Switch>
 );

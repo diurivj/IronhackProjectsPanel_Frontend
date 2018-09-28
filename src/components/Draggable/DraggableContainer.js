@@ -1,75 +1,91 @@
 import React, {Component} from "react";
 import { DragDropContext } from 'react-beautiful-dnd';
-//import initialData from "./initialData";
 import Column from "./Column"
 import {getCohortProjects} from "../../services/projectServices";
 
 class DraggableContainer extends Component{
 
   state = {
-    arr: [],
-    api: {}
+    dataAPI: {},
+    arr: []
   };
 
-  componentWillMount() {
-    getCohortProjects('5b897ecaf4c4f4001462b4bd', 2)
+  componentDidMount() {
+    const {arr} = this.state;
+    getCohortProjects(this.props.match.params.cohort, this.props.match.params.project)
       .then(result => {
         result.map(r => {
-          this.state.arr.push(r.title);
-          return r.title;
+          arr.push(r.title);
+          return arr;
         });
-        this.state.api = {
-          ...result,
-          columns: {
-            'column-1': {
-              id: 'column-1',
-              title: 'Projects',
-              taskIds: this.state.arr
+        this.setState({
+          dataAPI: {
+            tasks: {...result},
+            columns: {
+              'column-1': {
+                id: 'column-1',
+                title: 'Project 2: Full Stack Web Application',
+                taskIds: arr
+              }
             },
             columnOrder: ['column-1']
           }
-        };
-        //console.log(dataAPI)
+        })
       })
       .catch(e => console.log(e));
-    this.setState(this.state)
   }
 
   onDragEnd = result => {
-/*    const { destination, source, draggableId } = result;
-    if (!destination) return;
-    if (destination.droppableId === source.droppableId && destination.index === source.index) return;
-    const column = this.state.columns[source.droppableId];
+    const { destination, source, draggableId } = result;
+
+    if (!destination) {
+      return;
+    }
+
+    if (
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
+    ) {
+      return;
+    }
+
+    const column = this.state.dataAPI.columns[source.droppableId];
+    console.log(column);
     const newTaskIds = Array.from(column.taskIds);
     newTaskIds.splice(source.index, 1);
     newTaskIds.splice(destination.index, 0, draggableId);
+
     const newColumn = {
       ...column,
       taskIds: newTaskIds,
     };
+
     const newState = {
-      ...this.state,
+      ...this.state.dataAPI,
       columns: {
-        ...this.state.columns,
+        ...this.state.dataAPI.columns,
         [newColumn.id]: newColumn,
       },
     };
-    this.setState(newState);*/
+
+    this.setState(newState);
   };
 
   render(){
-    console.log(this.state);
+    const {dataAPI} = this.state;
+    if(dataAPI.columnOrder === undefined) return <p>Loading ...</p>;
     return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
-        {this.state.api.columnOrder.map(id => {
-          const column = this.state.api.columns[id];
-          const tasks = column.taskIds.map(id => this.state.tasks[id]);
-
-          return <Column key={column.id} column={column} tasks={tasks} />;
-        })}
-      </DragDropContext>
-    );
+      <div style={{width: '100vw', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2D354C'}}>
+        <DragDropContext onDragEnd={this.onDragEnd}>
+          {dataAPI.columnOrder.map(columnId => {
+            const column = dataAPI.columns[columnId];
+            const tasks = column.taskIds.map((taskId, i) => dataAPI.tasks[i]);
+            return <Column key={column.id} column={column} tasks={tasks} />;
+          })}
+        </DragDropContext>
+      </div>
+    )
   }
 }
 
-export default DraggableContainer
+export default DraggableContainer;
